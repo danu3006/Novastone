@@ -1,0 +1,8 @@
+# IDE Specific
+.idea/
+
+# Django Migrations
+
+# Mac
+.DS_Store
+
