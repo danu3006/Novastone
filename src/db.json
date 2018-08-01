@@ -1,0 +1,680 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add task",
+      "content_type": 7,
+      "codename": "add_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change task",
+      "content_type": 7,
+      "codename": "change_task"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete task",
+      "content_type": 7,
+      "codename": "delete_task"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$F4rcxhg9GfBG$/e7gWtCjldnq3duAFkXw3T8pfxKhUu/BSw+vR+LzMcw=",
+      "last_login": "2018-04-20T10:41:27.364Z",
+      "is_superuser": true,
+      "username": "danu",
+      "first_name": "Danu",
+      "last_name": "Kumanan",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2018-04-18T19:54:54Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$krD1Kv6EjDV3$aFscAJTftWWO8jdXJrA20Crm3qlRjNBkRV7kbWItYi8=",
+      "last_login": "2018-04-20T10:53:46.445Z",
+      "is_superuser": true,
+      "username": "test1",
+      "first_name": "Groom",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2018-04-20T10:14:20Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$100000$CWO0k50HIDvU$DrSs6tKPTGH1lVKkcvPzzDgVrD909AQkQqtI8hAq++8=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "test2",
+      "first_name": "Bride",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2018-04-20T10:14:32Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 14,
+    "fields": {
+      "created": "2018-04-20T10:16:42.122Z",
+      "name": "Wedding",
+      "description": "Review wedding budget worksheet.",
+      "status": false,
+      "user": 2,
+      "done_by": null
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 15,
+    "fields": {
+      "created": "2018-04-20T10:16:58.391Z",
+      "name": "Wedding",
+      "description": "Decide on wedding date.",
+      "status": false,
+      "user": 3,
+      "done_by": null
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 16,
+    "fields": {
+      "created": "2018-04-20T10:18:05.914Z",
+      "name": "Allocate Roles",
+      "description": "Select the members of our wedding party and ceremony participants (for readings, etc.)",
+      "status": false,
+      "user": 3,
+      "done_by": null
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 17,
+    "fields": {
+      "created": "2018-04-20T10:18:25.295Z",
+      "name": "Send Annoucements",
+      "description": "Send out wedding announcements to the local news papers",
+      "status": false,
+      "user": 2,
+      "done_by": null
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 18,
+    "fields": {
+      "created": "2018-04-20T10:18:42.918Z",
+      "name": "Hire Coordinator",
+      "description": "Interview and hire a wedding coordinator.",
+      "status": false,
+      "user": 2,
+      "done_by": null
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 19,
+    "fields": {
+      "created": "2018-04-20T10:19:17.975Z",
+      "name": "Reserve Location",
+      "description": "Reserve wedding ceremony location (e.g. house of worship, public space)",
+      "status": false,
+      "user": 2,
+      "done_by": null
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 20,
+    "fields": {
+      "created": "2018-04-20T10:19:44.747Z",
+      "name": "Choose Officiator",
+      "description": "Choose the person who will officiate at your weeding ceremony.",
+      "status": false,
+      "user": 3,
+      "done_by": null
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2018-04-18T20:17:09.973Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "1",
+      "object_repr": "danu",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2018-04-19T13:30:59.030Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "13",
+      "object_repr": "Test 13123",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2018-04-20T10:13:54.220Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "13",
+      "object_repr": "Test 13123",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2018-04-20T10:13:54.224Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "Task 123",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2018-04-20T10:13:54.226Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "9",
+      "object_repr": "Task 8",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2018-04-20T10:13:54.227Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "Task 9",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2018-04-20T10:13:54.228Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "Task 4",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2018-04-20T10:13:54.230Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "3",
+      "object_repr": "Task 2",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2018-04-20T10:14:20.189Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "test_user_one",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2018-04-20T10:14:32.236Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test_user_2",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2018-04-20T10:14:45.747Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "test_user_1",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"username\", \"first_name\", \"last_name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2018-04-20T10:14:50.659Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test_user_2",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"first_name\", \"last_name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2018-04-20T10:16:42.123Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "14",
+      "object_repr": "Wedding",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2018-04-20T10:16:58.392Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "15",
+      "object_repr": "Wedding",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2018-04-20T10:18:05.914Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "16",
+      "object_repr": "Allocate Roles",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2018-04-20T10:18:25.296Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "17",
+      "object_repr": "Send Annoucements",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2018-04-20T10:18:42.919Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "18",
+      "object_repr": "Hire Coordinator",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2018-04-20T10:19:17.975Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "19",
+      "object_repr": "Reserve Location",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2018-04-20T10:19:44.748Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "20",
+      "object_repr": "Choose Officiator",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2018-04-20T10:22:24.833Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "test1",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"username\", \"first_name\", \"last_name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2018-04-20T10:22:31.794Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test2",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"username\", \"first_name\", \"last_name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2018-04-20T10:41:33.386Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "2",
+      "object_repr": "test1",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"is_staff\", \"is_superuser\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2018-04-20T10:41:39.723Z",
+      "user": 1,
+      "content_type": 4,
+      "object_id": "3",
+      "object_repr": "test2",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"is_staff\", \"is_superuser\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2018-04-20T10:41:51.870Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "20",
+      "object_repr": "Choose Officiator",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"status\", \"done_by\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2018-04-20T10:49:32.304Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "20",
+      "object_repr": "Choose Officiator",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"status\", \"done_by\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2018-04-20T10:52:57.053Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "19",
+      "object_repr": "Reserve Location",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"status\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2018-04-20T10:53:00.312Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "18",
+      "object_repr": "Hire Coordinator",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"status\"]}}]"
+    }
+  }
+]

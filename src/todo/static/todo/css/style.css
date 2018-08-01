@@ -1,0 +1,178 @@
+* {
+    border-radius: 0 !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 14px !important;
+    background: #FAFAFA 100% !important;
+    -webkit-font-smoothing: antialiased !important;
+    margin: 0 !important;
+    padding-bottom: 100px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.header {
+    padding: 0;
+    background: #FFF;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    color: #000 !important;
+    border-bottom: 1px solid #EEE !important;
+    z-index: 100000;
+}
+
+.page {
+    background: #FFF !important;
+    word-wrap: break-word;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.page-clear {
+    background: transparent !important;
+    word-wrap: break-word;
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    float: left;
+    font-size: 16px;
+}
+
+.logo a {
+    color: #000 !important;
+}
+
+.logo a:hover {
+    color: inherit;
+}
+
+.border-right-15 {
+    border-right: 15px solid #FAFAFA !important;
+}
+
+.navigation {
+    float: right;
+}
+
+.navigation a {
+    color: #666 !important;
+}
+
+.tasks {
+    margin-top: 20px;
+}
+
+.btn-white {
+    background: #FFF !important;
+    border: 1px solid #EEE !important;
+    font-size: 14px !important;
+}
+
+.badge-white {
+    background: #FFF !important;
+    border: 1px solid #EEE !important;
+}
+
+.task {
+    background: #FFF !important;
+    word-wrap: break-word;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.task .name {
+    font-size: 20px;
+}
+
+.task .text {
+    margin: 15px 0 !important;
+}
+
+.attributes {
+    margin-top: 10px;
+}
+
+.small-icon {
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.badge-secondary, .btn-secondary {
+    background: #EEE !important;
+    color: #333 !important;
+    border: 1px solid #EDEDED !important;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.actions a, .actions span {
+    background: #FFF !important;
+    word-wrap: break-word;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: block;
+    cursor: pointer;
+    color: #2770d9 !important;
+    border: 1px solid #EEE !important;
+}
+
+.action a:hover {
+    text-decoration: none !important;
+}
+
+.success {
+    color: #155724 !important;
+    background-color: #e4fdea !important;
+    border: 1px solid #c2e4c9 !important;
+}
+
+.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.message {
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+ul.messages {
+    padding: 0 !important;
+    margin-top: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+.messages li {
+    list-style: none !important;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.pagination {
+    font-size: 12px !important;
+}
+
+.pagination a {
+    padding: 8px 10px !important;
+}
+
+.hidden {
+    display: none !important;
+}

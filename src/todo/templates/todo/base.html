@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    {% block head %}
+    {% endblock %}
+    <title>TODO - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'todo/css/style.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+          integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+            integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+"
+            crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{% static 'todo/js/cookie-jquery/jquery.cookie.js' %}"></script>
+
+</head>
+
+<body>
+<div class="header sticky">
+    <div class="container">
+        <div class="logo">
+            <a href="{% url 'todo:task-list' %}">Origin TODO</a>
+        </div>
+        <div class="navigation">
+            {% if user.is_authenticated %}
+                <span class="badge badge-primary" style="margin-right: 20px;"><b>{{ user.get_full_name }}</b></span>
+                <a title="Logout" href="{% url 'todo:logout' %}"><i class="fas fa-sign-out-alt"></i></a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<div class="container">
+    <ul class="messages">
+        {% for message in messages %}
+            <li {% if message.tags %}class="message {{ message.tags }}"{% endif %}>{{ message|safe }}</li>
+        {% endfor %}
+    </ul>
+    {% block content %}
+    {% endblock %}
+</div>
+
+{% block scripts %}
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-9 border-right-15">
+            <h4>All Tasks</h4>
+            {% include 'todo/inc/pagination.html' %}
+            <div class="tasks">
+                {% for task in object_list %}
+                    <div style="border: 1px solid #EEE;
+                            background: {% if task.user == user %}rgba(219, 246, 251, 0.3) !important;{% endif %}"
+                         class="task {% if task.status %}success{% endif %}" id="task{{ task.id }}">
+
+                        <span class="badge
+                                {% if task.user == user %}badge-primary{% else %}badge-white{% endif %}" title="Author">
+                            {{ task.user.get_full_name }}
+                        </span>
+                        <span class="name">
+                            {{ task.name }}
+                        </span>
+                        <span id="task-status-{{ task.id }}"
+                              class="badge
+                              {% if not task.status %}hidden{% endif %}
+                              badge-success">
+                            <i class="fas fa-check"></i> {{ task.done_by.get_full_name }}
+                        </span>
+                        <div class="text">
+                            {{ task.description }}
+                        </div>
+                        <div class="attributes">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {% if task.user == user %}
+                                        <a href="{% url 'todo:task-update' task.pk %}">
+                                            <button onclick="" class="btn btn-white">Edit</button>
+                                        </a>
+                                    {% endif %}
+                                    {% if not task.status %}
+                                        <button onclick="markDone(this);"
+                                                href="{% url 'api:tasks-list' %}{{ task.id }}/"
+                                                class="btn btn-white">
+                                            Mark Done
+                                        </button>
+                                    {% endif %}
+                                    {% if task.user == user %}
+                                        <a href="{% url 'todo:task-delete' task.pk %}">
+                                            <button class="btn btn-white">Delete</button>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="" style="color: indianred;">No tasks. <a href="{% url 'todo:task-create' %}">Click here
+                        to add
+                        one</a>
+                        .
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-3">
+            {% include 'todo/inc/sidebar.html' %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        let csrftoken = '{{ csrf_token }}';
+
+        function csrfSafeMethod(method) {
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+
+        function markDone(el) {
+            let link = $(el).attr('href');
+            $.ajax({
+                type: 'PATCH',
+                url: link,
+                data: {
+                    'status': true,
+                    'done_by': {{ user.id }},
+                },
+                success: function (data) {
+                    $('#task' + data.id).addClass('success');
+                    $(el).remove();
+                    $('#task-status-' + data.id)
+                        .removeClass('hidden')
+                },
+                error: function (xhr, textStatus, error) {
+                    console.log(xhr.statusText);
+                    console.log(textStatus);
+                    console.log(error)
+                }
+            });
+        }
+
+        let hidden = false;
+
+        function hideCompletedTasks() {
+            $('.task').each(function () {
+                if ($(this).hasClass('success')) {
+                    $(this).slideToggle();
+                }
+            });
+            hidden = !hidden;
+            let action = $('#hideCompletedTasks');
+            if (hidden) {
+                action.html('<i class="small-icon fas fa-eye"></i> Show Completed Tasks');
+            } else {
+                action.html('<i class="small-icon fas fa-eye-slash"></i> Hide Completed Tasks');
+            }
+        }
+
+    </script>
+{% endblock %}

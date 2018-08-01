@@ -6,3 +6,7 @@
 # Mac
 .DS_Store
 
+# Compile
+src/api/__pycache__/
+src/novastone/__pycache__/
+src/todo/__pycache__/
