@@ -12,4 +12,3 @@ src/novastone/__pycache__/
 src/todo/__pycache__/
 
 # DB
-src/db.sqlite3
