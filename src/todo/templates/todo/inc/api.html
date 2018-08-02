@@ -1,0 +1,68 @@
+{% extends 'todo/base.html' %}
+
+{% load static %}
+
+{% block head %}
+{% endblock %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-9 border-right-15">
+            <h4>Test API Calls</h4>
+            <div class="tasks">
+                <div class="task">
+                    <div class="name">Get List of Tasks</div>
+                    <div class="text" id="get_data">
+                    </div>
+                    <div class="">
+                        <button class="btn btn-primary" id="get_button">GET Tasks</button>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="name">Create a Task</div>
+                    <div class="text" id="post_data">
+                    </div>
+                    <div class="">
+                        <button class="btn btn-primary" id="post_button">POST Task</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        let token = '45e33ce10f5df28c12e6dd9f3bbd89bcd26b21bd';
+        $.ajaxSetup({
+            headers:{
+              'Authorization': "Token " + token
+            }
+        });
+
+        // jQuery GET
+        $('#get_button').click(function () {
+            $.get("/api/user/2/tasks/", function (data) {
+                $('#get_data').hide().html(JSON.stringify(data)).fadeIn();
+            })
+        });
+
+        let post_data = {
+            'csrfmiddlewaretoken': '{{ csrf_token }}',
+            "name":"Send New Annoucements",
+            "description": "Send out wedding announcements to the local news papers.",
+            "status": false,
+            "user": 1
+        };
+
+        $('#post_button').click(function () {
+            $.post("/api/task/create/", post_data, function (data) {
+                $('#post_data').hide().html(JSON.stringify(data)).fadeIn();
+            });
+        });
+    </script>
+{% endblock %}

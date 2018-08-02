@@ -11,7 +11,7 @@ from django.views.decorators.cache import never_cache
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.debug import sensitive_post_parameters
 from django.views.generic import (CreateView, DeleteView, FormView,
-                                  ListView, RedirectView, UpdateView)
+                                  ListView, RedirectView, UpdateView, TemplateView)
 
 from .models import Task
 
@@ -125,3 +125,7 @@ class TaskUpdateView(LoginRequiredMixin, UserPassesTestMixin, SuccessMessageMixi
 
     def test_func(self, user):
         return self.get_object().user == user
+
+
+class APITestView(TemplateView):
+    template_name = 'todo/inc/api.html'

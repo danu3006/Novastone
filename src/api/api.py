@@ -8,7 +8,22 @@ from .serializers import TaskSerializer
 class UserTaskListAPIHandler(generics.ListAPIView):
     """ Handles all API functionality for listing all tasks for a given user. """
     serializer_class = TaskSerializer
-    permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
-        return todo_models.User.objects.get(id=self.kwargs['id']).task_set
+        user = todo_models.User.objects.get(id=self.kwargs['id'])
+        return todo_models.Task.objects.filter(user=user)
+
+
+class TaskDeleteAPIHandler(generics.DestroyAPIView):
+    """ Handles all API functionality for deleting tasks. """
+    queryset = todo_models.Task.objects.all()
+    serializer_class = TaskSerializer
+    permission_classes = (IsAuthenticated,)
+
+
+class TaskCreateAPIHandler(generics.CreateAPIView):
+    """ Handles all API functionality for creating tasks. """
+    queryset = todo_models.Task.objects.all()
+    serializer_class = TaskSerializer
+    permission_classes = (IsAuthenticated,)
